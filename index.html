@@ -5,9 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ethan Burr | Cybersecurity & Computing</title>
   <style>
-    /* ==========================
-       Design System & Tokens
-       ========================== */
     :root {
       --bg-main: #f6f8fc;
       --bg-card: #ffffff;
@@ -41,9 +38,7 @@
       }
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -59,8 +54,7 @@
     header {
       position: relative;
       padding: 4rem 1.5rem 6rem;
-      background:
-        linear-gradient(120deg, var(--bg-accent), var(--bg-accent-2));
+      background: linear-gradient(120deg, var(--bg-accent), var(--bg-accent-2));
       color: #e5e7eb;
       clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
       overflow: hidden;
@@ -127,9 +121,7 @@
       transition: transform 0.3s ease;
     }
 
-    nav a:hover::after {
-      transform: scaleX(1);
-    }
+    nav a:hover::after { transform: scaleX(1); }
 
     main {
       max-width: var(--max-width);
@@ -165,19 +157,9 @@
       border-radius: 2px;
     }
 
-    p {
-      color: var(--text-muted);
-      max-width: 78ch;
-    }
-
-    ul {
-      padding-left: 1.4rem;
-    }
-
-    li {
-      margin-bottom: 0.65rem;
-      color: var(--text-muted);
-    }
+    p { color: var(--text-muted); max-width: 78ch; }
+    ul { padding-left: 1.4rem; }
+    li { margin-bottom: 0.65rem; color: var(--text-muted); }
 
     a.resource {
       color: var(--accent);
@@ -193,10 +175,6 @@
       padding: 2rem 1rem;
       font-size: 0.9rem;
     }
-
-    /* ==========================
-       Project Cards
-       ========================== */
 
     .project-card {
       border-radius: var(--radius-md);
@@ -233,9 +211,7 @@
       transition: all 0.2s ease;
     }
 
-    .project-header:hover .project-toggle {
-      background: rgba(96, 165, 250, 0.2);
-    }
+    .project-header:hover .project-toggle { background: rgba(96, 165, 250, 0.2); }
 
     .toggle-icon {
       font-size: 1.5rem;
@@ -245,9 +221,7 @@
       line-height: 1;
     }
 
-    .project-card.open .toggle-icon {
-      transform: rotate(45deg);
-    }
+    .project-card.open .toggle-icon { transform: rotate(45deg); }
 
     .project-content {
       max-height: 0;
@@ -263,16 +237,11 @@
       padding-bottom: 2rem;
     }
 
-    /* ==========================
-       PDF Viewer Modal
-       ========================== */
     .pdf-modal {
       display: none;
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
       background: rgba(0, 0, 0, 0.85);
       z-index: 1000;
       animation: fadeIn 0.3s ease;
@@ -285,8 +254,7 @@
     }
 
     .pdf-container {
-      width: 90%;
-      height: 90%;
+      width: 90%; height: 90%;
       background: var(--bg-card);
       border-radius: var(--radius-lg);
       overflow: hidden;
@@ -304,10 +272,7 @@
       align-items: center;
     }
 
-    .pdf-header h3 {
-      margin: 0;
-      font-size: 1.3rem;
-    }
+    .pdf-header h3 { margin: 0; font-size: 1.3rem; }
 
     .pdf-close {
       background: none;
@@ -315,8 +280,7 @@
       color: white;
       font-size: 1.8rem;
       cursor: pointer;
-      width: 40px;
-      height: 40px;
+      width: 40px; height: 40px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -324,61 +288,27 @@
       transition: background 0.2s ease;
     }
 
-    .pdf-close:hover {
-      background: rgba(255, 255, 255, 0.1);
-    }
-
-    .pdf-viewer {
-      flex: 1;
-      padding: 2rem;
-      overflow: auto;
-    }
-
-    .pdf-viewer iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-      border-radius: var(--radius-md);
-    }
+    .pdf-close:hover { background: rgba(255, 255, 255, 0.1); }
+    .pdf-viewer { flex: 1; padding: 2rem; overflow: auto; }
+    .pdf-viewer iframe { width: 100%; height: 100%; border: none; border-radius: var(--radius-md); }
 
     @keyframes fadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
     }
 
-    /* ==========================
-       Responsive Adjustments
-       ========================== */
     @media (max-width: 768px) {
-      section {
-        padding: 2rem 1.5rem;
-      }
-      
-      .project-header {
-        padding: 1.5rem;
-        grid-template-columns: 1fr auto;
-        gap: 1rem;
-      }
-      
-      .pdf-container {
-        width: 95%;
-        height: 95%;
-      }
-      
-      .pdf-header {
-        padding: 1rem 1.5rem;
-      }
-      
-      .pdf-viewer {
-        padding: 1rem;
-      }
+      section { padding: 2rem 1.5rem; }
+      .project-header { padding: 1.5rem; gap: 1rem; }
+      .pdf-container { width: 95%; height: 95%; }
+      .pdf-header { padding: 1rem 1.5rem; }
+      .pdf-viewer { padding: 1rem; }
     }
   </style>
 </head>
 
 <body>
 
-  <!-- PDF Viewer Modal -->
   <div id="pdfModal" class="pdf-modal">
     <div class="pdf-container">
       <div class="pdf-header">
@@ -393,9 +323,7 @@
 
   <header>
     <h1>Ethan Burr</h1>
-    <p>
-      Cybersecurity & Computing Student | Security-Oriented Systems Thinking | Quantitative & Analytical Research
-    </p>
+    <p>Cybersecurity & Computing Student | Security-Oriented Systems Thinking | Quantitative & Analytical Research</p>
     <nav>
       <a href="https://www.linkedin.com/in/ethan-burr-645708352/" target="_blank">LinkedIn</a>
       <a href="https://github.com/ethansimboliburr/projects" target="_blank">GitHub</a>
@@ -428,12 +356,11 @@
     <section id="projects" class="projects">
       <h2>Projects & Research</h2>
 
+      <!-- 1. News Dashboard -->
       <div class="project-card">
         <button type="button" class="project-header" aria-expanded="false">
           <span class="project-title">News Dashboard</span>
-          <span class="project-toggle">
-            <span class="toggle-icon">+</span>
-          </span>
+          <span class="project-toggle"><span class="toggle-icon">+</span></span>
         </button>
         <div class="project-content">
           <p class="project-summary">
@@ -461,12 +388,42 @@
         </div>
       </div>
 
+      <!-- 2. Soccer Team Searcher -->
+      <div class="project-card">
+        <button type="button" class="project-header" aria-expanded="false">
+          <span class="project-title">Soccer Team Information Searcher</span>
+          <span class="project-toggle"><span class="toggle-icon">+</span></span>
+        </button>
+        <div class="project-content">
+          <p class="project-summary">
+            A web application that allows users to search for football (soccer) teams and retrieve
+            detailed information including roster data, standings, and statistics, powered by a
+            live football data API.
+          </p>
+          <h3>Features</h3>
+          <ul>
+            <li>Search any football team by name</li>
+            <li>Retrieve live roster and club information</li>
+            <li>Display league standings and team stats</li>
+            <li>Clean, responsive interface</li>
+          </ul>
+          <h3>Tools & Technologies</h3>
+          <ul>
+            <li>HTML, CSS, JavaScript</li>
+            <li>Football data REST API</li>
+            <li>Deployed on Render</li>
+          </ul>
+          <p>
+            <a class="resource" href="https://football-soccer-team-searcher-via-api.onrender.com/cover" target="_blank">View Live Project →</a>
+          </p>
+        </div>
+      </div>
+
+      <!-- 3. Math Research -->
       <div class="project-card">
         <button type="button" class="project-header" aria-expanded="false">
           <span class="project-title">Influence of Weather Patterns on Stock Market Price</span>
-          <span class="project-toggle">
-            <span class="toggle-icon">+</span>
-          </span>
+          <span class="project-toggle"><span class="toggle-icon">+</span></span>
         </button>
         <div class="project-content">
           <p class="project-summary">
@@ -480,7 +437,6 @@
             <li>ARIMA time-series forecasting</li>
             <li>Sensitivity and residual analysis</li>
           </ul>
-
           <h3>Tools & Techniques</h3>
           <ul>
             <li>Statistical modeling and hypothesis testing</li>
@@ -488,7 +444,6 @@
             <li>Data normalization and validation</li>
             <li>Mathematical interpretation of real-world data</li>
           </ul>
-
           <h3>Key Findings</h3>
           <ul>
             <li>Weak to moderate correlation between weather variables and market volatility</li>
@@ -500,13 +455,12 @@
           </p>
         </div>
       </div>
+
     </section>
 
     <section id="contact">
       <h2>Contact</h2>
-      <p>
-        For professional or academic inquiries, please reach out via LinkedIn or email.
-      </p>
+      <p>For professional or academic inquiries, please reach out via LinkedIn or email.</p>
       <ul>
         <li>Email: <a class="resource" href="mailto:ethansimboliburr@gmail.com">ethansimboliburr@gmail.com</a></li>
         <li>LinkedIn: <a class="resource" href="https://www.linkedin.com/in/ethan-burr-645708352/" target="_blank">Ethan Burr</a></li>
@@ -519,7 +473,6 @@
   </footer>
 
   <script>
-    // Project card expansion functionality
     document.querySelectorAll('.project-header').forEach((header) => {
       header.addEventListener('click', () => {
         const card = header.closest('.project-card');
@@ -529,25 +482,16 @@
       });
     });
 
-    // PDF Viewer functionality
     const pdfModal = document.getElementById('pdfModal');
     const pdfFrame = document.getElementById('pdfFrame');
     const pdfTitle = document.getElementById('pdfTitle');
     const pdfClose = document.querySelector('.pdf-close');
-    
-    // PDF files
+
     const pdfFiles = {
-      resume: {
-        url: 'EthanBurrResume.pdf',
-        title: 'Ethan Burr - Resume'
-      },
-      research: {
-        url: './BurEthMathematicsHL.pdf',
-        title: 'Academic Research Paper - Influence of Weather Patterns on Stock Market Price'
-      }
+      resume: { url: 'EthanBurrResume.pdf', title: 'Ethan Burr - Resume' },
+      research: { url: './BurEthMathematicsHL.pdf', title: 'Academic Research Paper - Influence of Weather Patterns on Stock Market Price' }
     };
 
-    // Open PDF viewer function
     function openPdfViewer(pdfType) {
       const pdf = pdfFiles[pdfType];
       if (!pdf) return;
@@ -557,7 +501,6 @@
       document.body.style.overflow = 'hidden';
     }
 
-    // Event listeners for PDF links
     document.getElementById('resumeLink').addEventListener('click', function(e) {
       e.preventDefault();
       openPdfViewer('resume');
@@ -573,7 +516,6 @@
       openPdfViewer('research');
     });
 
-    // Close PDF viewer
     function closePdfViewer() {
       pdfModal.classList.remove('active');
       pdfFrame.src = '';
@@ -581,17 +523,11 @@
     }
 
     pdfClose.addEventListener('click', closePdfViewer);
-
     pdfModal.addEventListener('click', function(e) {
-      if (e.target === pdfModal) {
-        closePdfViewer();
-      }
+      if (e.target === pdfModal) closePdfViewer();
     });
-
     document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape' && pdfModal.classList.contains('active')) {
-        closePdfViewer();
-      }
+      if (e.key === 'Escape' && pdfModal.classList.contains('active')) closePdfViewer();
     });
   </script>
 
