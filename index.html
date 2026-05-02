@@ -430,6 +430,39 @@
 
       <div class="project-card">
         <button type="button" class="project-header" aria-expanded="false">
+          <span class="project-title">News Dashboard</span>
+          <span class="project-toggle">
+            <span class="toggle-icon">+</span>
+          </span>
+        </button>
+        <div class="project-content">
+          <p class="project-summary">
+            A multi-source news aggregation dashboard featuring AI-generated summaries,
+            real-time stock data, sports scores, and weather updates. Built with HTML,
+            CSS, and JavaScript and deployed via Render.
+          </p>
+          <h3>Features</h3>
+          <ul>
+            <li>AI-powered news summarization using Groq and Gemini</li>
+            <li>Real-time stock market data integration</li>
+            <li>Live sports scores and weather updates</li>
+            <li>Category filtering and responsive layout</li>
+          </ul>
+          <h3>Tools & Technologies</h3>
+          <ul>
+            <li>HTML, CSS, JavaScript</li>
+            <li>Groq and Gemini API for AI summaries</li>
+            <li>Third-party REST APIs for live data</li>
+            <li>Deployed on Render</li>
+          </ul>
+          <p>
+            <a class="resource" href="https://news-dashboard-uf46.onrender.com/" target="_blank">View Live Project →</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <button type="button" class="project-header" aria-expanded="false">
           <span class="project-title">Influence of Weather Patterns on Stock Market Price</span>
           <span class="project-toggle">
             <span class="toggle-icon">+</span>
@@ -517,16 +550,9 @@
     // Open PDF viewer function
     function openPdfViewer(pdfType) {
       const pdf = pdfFiles[pdfType];
-      
       if (!pdf) return;
-      
-      // Set PDF title
       pdfTitle.textContent = pdf.title;
-      
-      // Set PDF source
       pdfFrame.src = pdf.url;
-      
-      // Show modal
       pdfModal.classList.add('active');
       document.body.style.overflow = 'hidden';
     }
@@ -550,20 +576,18 @@
     // Close PDF viewer
     function closePdfViewer() {
       pdfModal.classList.remove('active');
-      pdfFrame.src = ''; // Unload PDF
+      pdfFrame.src = '';
       document.body.style.overflow = 'auto';
     }
 
     pdfClose.addEventListener('click', closePdfViewer);
 
-    // Close modal when clicking outside the container
     pdfModal.addEventListener('click', function(e) {
       if (e.target === pdfModal) {
         closePdfViewer();
       }
     });
 
-    // Close modal with Escape key
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape' && pdfModal.classList.contains('active')) {
         closePdfViewer();
